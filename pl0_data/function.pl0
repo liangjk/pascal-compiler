@@ -1,0 +1,27 @@
+var x, y;
+
+procedure func;
+begin
+if x < 1 then
+	begin
+    y := x;
+    end
+else
+	begin
+    if x < 10 then
+    	begin
+        y := 2 * x - 1
+        end
+    else
+    	begin
+        y := 3 * x - 11
+        end;
+    end
+;
+end;
+
+begin
+    read(x);
+    call func;
+    writeln(y);
+end.

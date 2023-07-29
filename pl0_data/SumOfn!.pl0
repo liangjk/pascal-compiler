@@ -1,0 +1,26 @@
+var n, m, fact, sum;
+
+procedure factor;
+begin
+    if m > 0 then
+        begin
+            fact := fact * m;
+            m := m - 1;
+            call factor;
+        end;
+end;
+
+begin
+    read(n);
+    sum := 0;
+    while n > 0 do
+        begin
+            m := n;
+            fact := 1;
+            call factor;
+            if fact > 20 then begin writeln (n); end;
+            sum  := sum + fact;
+            n := n - 1;
+        end;
+    writeln(sum);
+end.
